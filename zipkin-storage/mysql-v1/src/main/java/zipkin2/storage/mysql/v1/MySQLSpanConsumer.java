@@ -110,6 +110,7 @@ final class MySQLSpanConsumer implements SpanConsumer {
 
         int ipv4 =
             ep != null && ep.ipv4Bytes() != null ? ByteBuffer.wrap(ep.ipv4Bytes()).getInt() : 0;
+        // annotations
         for (V1Annotation a : v1Span.annotations()) {
           InsertSetMoreStep<Record> insert =
               create

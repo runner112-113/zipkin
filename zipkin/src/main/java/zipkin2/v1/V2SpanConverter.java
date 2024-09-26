@@ -59,6 +59,7 @@ public final class V2SpanConverter {
       result.addAnnotation(md.endTs, md.end, ep);
     }
 
+    // tags存在binaryAnnotations
     for (Map.Entry<String, String> b : value.tags().entrySet()) {
       result.addBinaryAnnotation(b.getKey(), b.getValue(), ep);
     }
